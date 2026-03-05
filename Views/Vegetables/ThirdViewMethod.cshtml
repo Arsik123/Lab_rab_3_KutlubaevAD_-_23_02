@@ -1,0 +1,15 @@
+﻿@model IEnumerable<IGrouping<char, Lab_rab_3_KutlubaevAD_БПИ_23_02.Models.Vegetable>>
+
+<h2>Группировка овощей по первой букве</h2>
+
+@foreach (var group in Model)
+{
+    <h3>@group.Key</h3>
+
+    <ul>
+        @foreach (var item in group)
+        {
+            <li>@item.Name</li>
+        }
+    </ul>
+}
